@@ -1,0 +1,19 @@
+#!/bin/execlineb -S0
+multisubstitute {
+	importas -D 1 NT NT
+}
+blastn
+	-query ${1} # query
+	-db ${2} # subject
+	-task blastn
+	-reward 1
+	-penalty -1
+	-gapopen 2
+	-gapextend 2
+	-word_size 7
+	-dust no
+	-soft_masking false
+	-num_alignments 100
+	-num_threads ${NT}
+	-evalue 10
+	-outfmt 0

@@ -88,11 +88,16 @@ ${BEST_BLAST_ALIGNMENT}/%.txt:	${BLAST_OUTPUT}/%.txt
 ${BLAST_OUTPUT}'/(.+)~(.+)\.txt':R:	${QUERY_FASTA}'/\1\.fa\.fai'	${SUBJECT_FASTA}'/\2\.fa\.fai'	${SUBJECT_FASTA}'/\2\.fa\.nhr'
 	set -x
 	mkdir -p "$(dirname "${target}")"
-	HSe-blastn \
+	HSe-blastn-pairwise \
+		"${QUERY_FASTA}/${stem1}.fa" \
+		"${SUBJECT_FASTA}/${stem2}.fa" \
+	> "${target}.m0.build" \
+	&& HSe-blastn \
 		"${QUERY_FASTA}/${stem1}.fa" \
 		"${SUBJECT_FASTA}/${stem2}.fa" \
 	> "${target}.build" \
-	&& mv "${target}.build" "${target}"
+	&& mv "${target}.build" "${target}" \
+	&& mv "${target}.m0.build" "${target}.m0"
 
 ${QUERY_FASTA}/%.fa.fai:	${QUERY_FASTA}/%.fa
 	set -x
