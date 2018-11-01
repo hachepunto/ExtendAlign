@@ -85,6 +85,7 @@ Requirements
 
   - [`samtools`](http://www.htslib.org/download/ "Utilities for interacting with and post-processing short DNA sequence read alignments")
 
+Install requirements [instructions](docs/Install_Requirements.md). 
 
 References
 ==========
