@@ -25,8 +25,8 @@ sudo make install
 
 The source package can be download from:
 
-  - [samtools](http://www.htslib.org/download/)
   - [htslib](http://www.htslib.org/download/)
   - [skalibs](http://skarnet.org/software/skalibs/)
   - [s6](http://skarnet.org/software/s6/)
+  - [samtools](http://www.htslib.org/download/)
   - [execline](http://skarnet.org/software/execline/)
