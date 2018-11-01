@@ -9,7 +9,7 @@ sudo apt update
 sudo apt install blast2 coreutils findutils 9base
 ```
 
-To finish the `mk` configuration, ejecute:
+To finish the `mk` configuration, execute:
 
 ```
 echo 'export PATH=$PATH:/usr/lib/plan9/bin' >> ~/.bashrc
