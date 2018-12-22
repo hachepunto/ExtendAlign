@@ -13,7 +13,7 @@ blastn
 	-word_size 7
 	-dust no
 	-soft_masking false
-	-max_target_seqs 100
+	-max_target_seqs 500
 	-num_threads ${NT}
-	-evalue 10
+	-evalue 5000
 	-outfmt "6 qseqid sseqid pident length mismatch gaps qstart qend sstart send evalue bitscore sstrand"
